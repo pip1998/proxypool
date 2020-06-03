@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"github.com/go-clog/clog"
 	"log"
 	"net/http"
 
@@ -28,6 +29,7 @@ func ProxyHandler(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("content-type", "application/json")
 		b, err := json.Marshal(storage.ProxyRandom())
 		if err != nil {
+			clog.Info("[api] get ip err %v", err)
 			return
 		}
 		w.Write(b)
@@ -40,6 +42,7 @@ func FindHandler(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("content-type", "application/json")
 		b, err := json.Marshal(storage.ProxyFind("https"))
 		if err != nil {
+			clog.Info("[api] get https err %v", err)
 			return
 		}
 		w.Write(b)

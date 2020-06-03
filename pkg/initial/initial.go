@@ -18,7 +18,7 @@ func GlobalInit() {
 	clog.Trace("Log path: %s", setting.LogRootPath)
 	models.LoadDatabaseInfo()
 	setting.NewServices()
-
+	clog.Info("SQLite3 Supported")
 	if setting.InstallLock {
 		if err := models.NewEngine(); err != nil {
 			clog.Fatal(2, "Fail to initialize ORM engine: %v", err)

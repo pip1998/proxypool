@@ -17,5 +17,5 @@ require (
 	github.com/nladuo/go-phantomjs-fetcher v0.0.0-20190613094346-fa84d9f5c647
 	github.com/parnurzeal/gorequest v0.2.16
 	moul.io/http2curl v1.0.0 // indirect
-	xorm.io/core v0.7.3
+	xorm.io/core v0.7.2-0.20190928055935-90aeac8d08eb
 )

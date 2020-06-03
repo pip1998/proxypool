@@ -125,7 +125,7 @@ func NewContext() {
 func newLogService() {
 	// Because we always create a console logger as primary logger before all settings are loaded,
 	// thus if user doesn't set console logger, we should remove it after other loggers are created.
-	hasConsole := false
+	//hasConsole := false
 
 	// Get the log mode.
 	if DebugMode {
@@ -161,7 +161,7 @@ func newLogService() {
 		// Generate log configuration.
 		switch clog.MODE(mode) {
 		case clog.CONSOLE:
-			hasConsole = true
+			//hasConsole = true
 			LogConfigs[i] = clog.ConsoleConfig{
 				Level:      level,
 				BufferSize: Cfg.Section("log").Key("BUFFER_LEN").MustInt64(100),
@@ -192,10 +192,12 @@ func newLogService() {
 	}
 
 	// Make sure everyone gets version info printed.
-	clog.Info("%s %s", AppName, AppVer)
-	if !hasConsole {
-		clog.Delete(clog.CONSOLE)
-	}
+	clog.Info("%s: %s", AppName, AppVer)
+	clog.Info("init before")
+	//if !hasConsole {
+	//	clog.Delete(clog.CONSOLE)
+	//}
+	clog.Info("init after")
 }
 
 // NewServices .

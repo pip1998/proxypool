@@ -11,6 +11,7 @@ import (
 
 	"github.com/go-clog/clog"
 	_ "github.com/go-sql-driver/mysql"
+	//"github.com/go-xorm/core"
 	"github.com/go-xorm/xorm"
 	"github.com/henson/proxypool/pkg/setting"
 	_ "github.com/lib/pq"

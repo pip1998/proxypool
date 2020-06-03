@@ -1,0 +1,5 @@
+2020/06/02 23:33:32 [xorm] [warn]  2020/06/02 23:33:32.018514 Table ip Column id db default is nextval('ip_id_seq'::regclass), struct default is 
+2020/06/02 23:41:07 [xorm] [warn]  2020/06/02 23:41:07.869987 Table ip Column id db default is nextval('ip_id_seq'::regclass), struct default is 
+2020/06/02 23:47:28 [xorm] [warn]  2020/06/02 23:47:28.854399 Table ip Column id db default is nextval('ip_id_seq'::regclass), struct default is 
+2020/06/02 23:51:41 [xorm] [warn]  2020/06/02 23:51:41.020905 Table ip Column id db default is nextval('ip_id_seq'::regclass), struct default is 
+2020/06/02 23:55:42 [xorm] [warn]  2020/06/02 23:55:42.890461 Table ip Column id db default is nextval('ip_id_seq'::regclass), struct default is 

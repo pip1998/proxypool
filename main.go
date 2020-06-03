@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/go-clog/clog"
 	"log"
 	"runtime"
 	"sync"
@@ -17,7 +18,7 @@ func main() {
 
 	//init the database
 	initial.GlobalInit()
-
+	clog.Info("init success")
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	ipChan := make(chan *models.IP, 2000)
 
